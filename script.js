@@ -43,5 +43,11 @@ function hideLargeRoom() {
 
 function goToPage() {
     window.location.href = "https://www.facebook.com/profile.php?id=100057029126631";
+}
 
+function scrollToSection(sectionClassName) {
+    var elements = document.getElementsByClassName(sectionClassName);
+    if (elements.length > 0) {
+        elements[0].scrollIntoView({ behavior: 'smooth' });
+    }
 }

@@ -29,6 +29,9 @@ body{
 }
 .nav ul{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
 }
 
 .nav ul li{
@@ -61,15 +64,17 @@ body{
 }
 
 
+.head-text, .banner-text {
+    text-align: center;
+}
+
 .head-text{
-    margin-left: 25px;
     height: 45px;
     color: white;
     font-size: 40px;
 }
 
 .banner-text{
-    margin-left: 25px;
     height: 24px;
     color: white;
     font-size: 16px;
@@ -108,4 +113,25 @@ body{
 .large-room:hover{
     background-color: gray;
     cursor: pointer;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px;
+}
+
+.about-header{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about-text{
+    font-size: 16px;
+}
+
+.about iframe{
+    margin-top: 20px;
 }
