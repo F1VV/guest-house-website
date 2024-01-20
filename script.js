@@ -1,6 +1,17 @@
 
+var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+function updateImage() {
+    screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+}
+
 function showSmallRoom() {
-    document.querySelector('.banner').style.backgroundImage = 'url("img/smallRoom-banner.jpg")';
+
+    if (screenWidth <= 768) {
+        document.querySelector('.banner').style.backgroundImage = 'url("img/small-mobile.jpg")';
+    } else {
+        document.querySelector('.banner').style.backgroundImage = 'url("img/smallRoom-banner.jpg")';
+    }
     document.querySelector('.head').style.opacity = '0';
     document.querySelector('.text').style.opacity = '0';
 }
@@ -14,7 +25,11 @@ function hideSmallRoom() {
 }
 
 function showMidRoom() {
-    document.querySelector('.banner').style.backgroundImage = 'url("img/midRoom-banner.jpg")';
+    if (screenWidth <= 768) {
+        document.querySelector('.banner').style.backgroundImage = 'url("img/mid-mobile.jpg")';
+    } else {
+        document.querySelector('.banner').style.backgroundImage = 'url("img/midRoom-banner.jpg")';
+    }
     document.querySelector('.head').style.opacity = '0';
     document.querySelector('.text').style.opacity = '0';
 }
@@ -51,3 +66,5 @@ function scrollToSection(sectionClassName) {
         elements[0].scrollIntoView({ behavior: 'smooth' });
     }
 }
+
+window.addEventListener('resize', updateImage);

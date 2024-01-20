@@ -1,0 +1,201 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Kanit;
+    src: url(fonts/Kanit-Light.ttf);
+}
+
+body {
+  font-family: Kanit;
+  background: white;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar{
+    display: flex;
+    padding: 0px 40px;
+}
+
+.nav{
+    display:flex;
+    flex:3;
+}
+.logo{
+    margin: 10px;
+}
+
+.logo img{
+    width: 80px;
+    height: 56px;
+}
+.nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.nav ul li{
+    list-style: none;
+    text-decoration: none;
+    margin: 0 10px;
+    justify-content: center;
+    align-items: left;
+}
+
+.nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    margin-left: 15px;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: black;
+  color: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.leftcolumn .card .fakeimg1{
+    background-image: url('https://medias.thansettakij.com/uploads/images/md/2024/01/n17wjGC4K5UZuGJBrRYi.webp?x-image-process=style/md-webp');
+    height: 400px;
+    background-repeat: cover;
+    background-size: cover;
+}
+
+.leftcolumn .card .fakeimg2{
+    background-image: url('https://cms.dmpcdn.com/travel/2021/11/26/c24405b0-4e2f-11ec-9099-99acabfbc2fc_webp_original.jpg');
+    height: 400px;
+    background-repeat: cover;
+    background-size: cover;
+}
+
+.rightcolumn .card .banner{
+    background-image: url('img/homdoi.jpg');
+    background-repeat: cover;
+    background-size: cover;
+    height: 200px;
+
+}
+
+.rightcolumn .card iframe{
+    width:100%;
+    height:300px;
+    border:none; 
+    
+}
+
+/* Footer */
+.footer{
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 30px 25px;
+}
+
+.contact ul li, .news ul li, .address ul li{
+    list-style: none;
+    text-decoration: none;
+    margin: 0 10px;
+    justify-content: center;
+    align-items: left;
+}
+
+.footer-copyright{
+    margin-top: 0px;
+    background-color: black;
+    color: white;
+}
+
+@media screen and (max-width: 768px){
+    .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
+      }
+}
+
+@media screen and (max-width: 576px){
+    .leftcolumn .card .fakeimg1{
+        height: 200px;
+    }
+    .leftcolumn .card .fakeimg2{
+        height: 200px;
+    }
+    .rightcolumn .card .banner{
+        height: 100px;
+    }
+    .rightcolumn .card iframe{
+        height:200px;
+    }
+
+    .rightcolumn .card .banner{
+        background-image: url('img/homdoi.jpg');
+        background-repeat: cover;
+        background-size: cover;
+        height: 200px;
+    }
+
+    .nav ul li{
+        display: none;
+    }
+
+    .contact ul, .news ul, .address ul{
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .address ul li{
+        display: none;
+    }
+
+    .footer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-copyright{
+        justify-content: left;
+        align-items: left;
+    }
+
+}
